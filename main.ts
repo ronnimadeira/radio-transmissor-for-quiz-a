@@ -4,7 +4,11 @@ input.onButtonPressed(Button.A, function () {
 })
 radio.onReceivedString(function (receivedString) {
     basic.clearScreen()
-    basic.showString(receivedString)
+    if (receivedString == "A") {
+        basic.showIcon(IconNames.LeftTriangle)
+    } else {
+        basic.showIcon(IconNames.Square)
+    }
 })
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
